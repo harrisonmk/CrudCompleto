@@ -78,26 +78,6 @@ public class PessoaDao {
 
     }
 
-    public Pessoa fazAlgo(Pessoa p) {
-        Pessoa pe = null;
-        for (int i = 0; i < lista.size(); i++) {
-            p = lista.get(i);
-            if (lista.isEmpty()) {
-                pe = null;
-            } else {
 
-                pe = p;
-                break;
-            }
-
-        }
-
-        if (pe == null) {
-            return null;
-        } else {
-            return pe;
-        }
-
-    }
 
 }

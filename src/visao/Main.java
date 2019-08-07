@@ -74,15 +74,6 @@ public class Main {
                     pessoaDao.lista(p);
 
                     break;
-                case 5:
-                     p = new Pessoa();
-                     if (pessoaDao.fazAlgo(p) == null){
-                      System.out.println("Lista Vazia");     
-                     }else {
-                         System.out.println(pessoaDao.fazAlgo(p)); 
-                     }
-                    
-                    break;
 
                 case 0:
 
