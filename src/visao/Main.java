@@ -45,9 +45,11 @@ public class Main {
                     break;
 
                 case 2:
-                    p = new Pessoa();
-
-                    Pessoa recebe = pessoaDao.busca(p);
+                    scan.nextLine();
+                   System.out.print("\nDigite o nome da pessoa: ");
+                    String nomes = scan.nextLine();
+                   // p = new Pessoa();
+                    Pessoa recebe = pessoaDao.busca(nomes);
 
                     if (recebe == null) {
                         System.out.println("\nUsuario não Encontrado");
@@ -73,6 +75,10 @@ public class Main {
 
                     pessoaDao.lista(p);
 
+                    break;
+                case 5:
+                    
+                 
                     break;
 
                 case 0:

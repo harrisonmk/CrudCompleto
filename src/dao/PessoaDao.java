@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import modelo.Pessoa;
 
@@ -10,8 +11,9 @@ import modelo.Pessoa;
  */
 public class PessoaDao {
 
-    ArrayList<Pessoa> lista = new ArrayList<>();
+    List<Pessoa> lista = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
+    Pessoa pes;
 
     /**
      * Metodo Para inserir varias pessoas em uma lista
@@ -79,5 +81,29 @@ public class PessoaDao {
     }
 
 
+       public Pessoa busca(String nome) {
+              
+        Pessoa p;
+        
+        Pessoa pe = null;
+
+        for (int i = 0; i < lista.size(); i++) {
+            p = lista.get(i);
+            if (p.getNome().equals(nome)) {
+                pe = p;
+                break;
+            } else {
+                pe = null;
+            }
+
+        }
+
+        if (pe == null) {
+            return null;
+        } else {
+            return pe;
+        }
+
+    }
 
 }
